@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boosture – Practise the conversations you dread, in VR</title>
+    <meta name="description"
+        content="Boosture is a Meta Quest app for practising difficult everyday conversations out loud with AI-driven characters, with support when you freeze.">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --accent: #3b6cf6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #1d1d1f;
+            background: #fff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e8e8ea;
+                background: #141416;
+            }
+
+            .card {
+                background: #1c1d22;
+                border-color: #2a2c33;
+            }
+
+            footer {
+                border-color: #2a2c33;
+            }
+
+            :root {
+                --accent: #8ab4ff;
+            }
+        }
+
+        main,
+        footer {
+            max-width: 52rem;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        header.hero {
+            padding: 5rem 0 3rem;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 0;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 6vw, 3.4rem);
+            line-height: 1.1;
+            margin: 0.6rem 0 1rem;
+        }
+
+        .lede {
+            font-size: 1.2rem;
+            max-width: 38rem;
+            opacity: 0.85;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 3rem 0 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            border: 1px solid #e6e8ee;
+            border-radius: 14px;
+            padding: 1.25rem 1.3rem;
+            background: #fafbfd;
+        }
+
+        .card h3 {
+            margin: 0 0 0.4rem;
+            font-size: 1.05rem;
+        }
+
+        .card p {
+            margin: 0;
+            opacity: 0.85;
+        }
+
+        .step {
+            font-weight: 700;
+            color: var(--accent);
+            margin-right: 0.35rem;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        .status {
+            margin-top: 1.5rem;
+            font-weight: 600;
+        }
+
+        .fine {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 2.5rem;
+        }
+
+        footer {
+            border-top: 1px solid #e6e8ee;
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            padding-bottom: 3rem;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            margin-right: 1.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <header class="hero">
+            <p class="eyebrow">For Meta Quest</p>
+            <h1>Boosture</h1>
+            <p class="lede">Practise the conversations you dread, out loud, in VR. Speak up to a rude barista or push
+                back on an unfair review, and get help the moment you freeze.</p>
+            <p class="status">In development. Coming to Meta Quest.</p>
+        </header>
+
+        <h2>How it works</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><span class="step">1</span>Pick a situation</h3>
+                <p>Each scenario puts you face to face with a character in a realistic setting, from a busy café to your
+                    manager's office.</p>
+            </div>
+            <div class="card">
+                <h3><span class="step">2</span>Just talk</h3>
+                <p>Say what you'd say in real life. The character listens and responds to what you actually said, so no
+                    two conversations go the same way.</p>
+            </div>
+            <div class="card">
+                <h3><span class="step">3</span>Get support if you freeze</h3>
+                <p>Go quiet and help steps in gradually: a nudge, then a hint, then example phrases. Or raise your hand
+                    to ask for help straight away.</p>
+            </div>
+            <div class="card">
+                <h3><span class="step">4</span>See how it went</h3>
+                <p>After each session you get friendly feedback on what worked and what to try next time. Then go again.
+                </p>
+            </div>
+        </div>
+
+        <h2>Who it's for</h2>
+        <p>Anyone who finds certain conversations hard to start, or hard to stay in: introverts, people who replay
+            awkward moments for days, or anyone who'd rather rehearse before the real thing. No audience, no judgement,
+            as many tries as you like.</p>
+
+        <h2>Scenarios</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>The café</h3>
+                <p>Your order is wrong and the barista is in a hurry. Practise speaking up for something small.</p>
+            </div>
+            <div class="card">
+                <h3>The performance review</h3>
+                <p>Your manager delivers an unfair review. Practise asking for specifics and holding your ground.</p>
+            </div>
+        </div>
+        <p>More scenarios are on the way.</p>
+
+        <p class="fine">Boosture is a tool for practising conversations. It is not therapy, counselling or a medical
+            service.</p>
+
+    </main>
+
+    <footer>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="https://x.com/rz_builds_vr">Follow the build on X</a>
+        <a href="mailto:rihanna.zekri.dev@gmail.com">Contact</a>
+        <p class="fine" style="margin-top:1rem">© 2026 Delgarm</p>
+    </footer>
+</body>
+
+</html>
