@@ -78,7 +78,8 @@
             font-weight: 600;
         }
 
-        ul {
+        ul,
+        ol {
             padding-left: 1.25rem;
         }
     </style>
@@ -88,7 +89,7 @@
 
     <p><a href="index.html">← Boosture</a></p>
     <h1>Boosture Privacy Policy</h1>
-    <p class="meta">Effective date: 14 November 2026</p>
+    <p class="meta">Effective date: 22 November 2026</p>
 
     <p>Boosture is a virtual reality app for Meta Quest where you practise everyday social conversations with AI-driven
         characters. This policy explains what information Boosture uses, why, who it is shared with, and the choices you
@@ -98,10 +99,12 @@
         can contact us at <a href="mailto:rihanna.zekri.dev@gmail.com">rihanna.zekri.dev@gmail.com</a>.</p>
 
     <div class="note">
-        <strong>The short version.</strong> Boosture has no accounts and no ads. To let characters respond to what you
-        say, short recordings of your voice are sent to our server, turned into text, and used to generate the
-        character's reply. We don't sell your information, and we don't keep your recordings or conversations after they
-        have been processed. Hand tracking stays on your headset.
+        <strong>The short version.</strong> Boosture has no ads. When you sign in with your Meta account, we receive
+        your Meta user ID, a number that identifies your account, so your sessions and progress can follow you. We
+        don't receive your name, email or password. To let characters respond to what you say, short recordings of your
+        voice are sent to our server, turned into text, and used to generate the character's reply. We don't sell your
+        information, and we don't keep your recordings or conversations after they have been processed. Hand tracking
+        stays on your headset.
     </div>
 
     <h2>1. Information Boosture uses</h2>
@@ -111,6 +114,13 @@
             <th>Information</th>
             <th>What it's used for</th>
             <th>Where it goes</th>
+        </tr>
+        <tr>
+            <td><strong>Meta user ID and account record</strong> (when you sign in): your Meta user ID, the dates you
+                first and last signed in, and the practice sessions you've used</td>
+            <td>Signing you in, counting your sessions, and showing your progress and plan as those features are
+                added.</td>
+            <td>Received from Meta, then stored by us with our server host (Google Cloud / Firebase).</td>
         </tr>
         <tr>
             <td><strong>Voice recordings</strong> (only while a scenario is listening for your reply)</td>
@@ -140,18 +150,37 @@
         </tr>
     </table>
 
-    <p>We do not ask for your name, email address, location, contacts or payment details, and Boosture does not use your
-        Meta account profile.</p>
+    <p>We do not ask for your name, email address, location, contacts or payment details. From your Meta account we
+        receive only your user ID, not your name, email address, password or profile photo.</p>
 
-    <h2>2. When the microphone is on</h2>
+    <h2>2. Signing in with your Meta account</h2>
+    <p>When you open Boosture, it signs you in with the Meta account on your headset. Meta confirms to our server that
+        the sign-in is genuine and gives us your Meta user ID. We then store your account record so your free sessions
+        and progress follow you across devices and reinstalls.</p>
+    <p>We use your account record only to run Boosture: to keep you signed in, count your sessions and show your
+        progress. We don't sell it, use it for advertising, or share it with anyone except the service providers listed
+        below.</p>
+
+    <h2>3. When the microphone is on</h2>
     <p>Boosture asks for microphone permission the first time you start it. Your voice is only captured while a practice
         scenario is waiting for your reply. Recording pauses while the character is speaking, and anything picked up
         while the app is in the background (for example while your headset is off or the system menu is open) is
         discarded. You can turn off microphone access at any time in your headset's settings; the scenarios will still
         run, but characters won't be able to respond to what you say.</p>
+    <p>Each recording is handled like this:</p>
+    <ol>
+        <li>It is sent to our server, which passes it to ElevenLabs to turn your speech into text.</li>
+        <li>That text, with the earlier lines of the conversation, is sent to Anthropic, which writes the character's
+            next reply.</li>
+        <li>The reply is sent to ElevenLabs, which turns it into the character's voice.</li>
+        <li>At the end of a session, the conversation text is sent to Anthropic to write your feedback.</li>
+    </ol>
+    <p>We don't save recordings or transcripts in our database, and we don't use them to identify you.</p>
 
-    <h2>3. How long we keep information</h2>
+    <h2>4. How long we keep information</h2>
     <ul>
+        <li><strong>Your account record</strong> (Meta user ID, sign-in dates and session records) is kept for as long
+            as you use Boosture, and deleted within 30 days if you ask us to delete it.</li>
         <li><strong>Voice recordings and conversation text</strong> are processed to produce a reply and are not stored
             by us afterwards. During a session, the conversation is held in your headset's memory so the character can
             follow the conversation; it is cleared when you restart the scenario or close the app.</li>
@@ -159,11 +188,11 @@
         <li>Our service providers may keep data for a limited period under their own policies, as described below.</li>
     </ul>
 
-    <h2>4. Who we share information with</h2>
+    <h2>5. Who we share information with</h2>
     <p>We only share information with the service providers that make Boosture work, and only what they need:</p>
     <ul>
-        <li><strong>Google Cloud / Firebase</strong> – hosts our server (United States). <a
-                href="https://firebase.google.com/support/privacy">Firebase privacy information</a></li>
+        <li><strong>Google Cloud / Firebase</strong> – hosts our server and stores account records (Australia and the
+            United States). <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a></li>
         <li><strong>ElevenLabs</strong> – speech-to-text for your voice and text-to-speech for character voices. <a
                 href="https://elevenlabs.io/privacy-policy">ElevenLabs privacy policy</a></li>
         <li><strong>Anthropic</strong> – the AI model that writes character lines and session feedback. <a
@@ -172,84 +201,47 @@
     <p>We use these providers through their business (API) services. We do not sell your information, and we do not
         share it for advertising. We may disclose information if required by law.</p>
 
-    <h2>5. International transfers</h2>
-    <p>Our server and providers are located outside Australia, mainly in the United States. By using Boosture, your
-        voice recordings and conversation text will be processed there. We choose providers that protect data in transit
-        with encryption and that commit to protecting the information they process for us.</p>
+    <h2>6. International transfers</h2>
+    <p>Our server runs in Australia and the United States, and our other providers are mainly in the United States. By
+        using Boosture, your account record, voice recordings and conversation text will be processed there, and may be
+        handled under the privacy laws of those countries. We choose providers that protect data in transit with
+        encryption and that commit to protecting the information they process for us.</p>
 
-    <h2>6. Not therapy or medical advice</h2>
+    <h2>7. Not therapy or medical advice</h2>
     <p>Boosture is a tool for practising conversations. It is not therapy, counselling or a medical service, and it is
         not designed to diagnose or treat any condition. Please don't share sensitive personal information (such as
         health details) during practice conversations, since anything you say is processed as described above.</p>
 
-    <h2>7. Children</h2>
+    <h2>8. Children</h2>
     <p>Boosture is intended for people aged 18 and over. We don't knowingly collect information from children. If you
         believe a child has used Boosture, contact us and we'll help.</p>
 
-    <h2>8. Your choices and rights</h2>
+    <h2>9. Your choices and rights</h2>
     <ul>
         <li>You can stop voice processing at any time by turning off microphone permission or closing the app.</li>
         <li>You can delete your on-device settings by uninstalling Boosture.</li>
-        <li>Because we don't keep recordings or conversations and have no accounts, we usually hold nothing that
-            identifies you. If you have a question about your information, want access to it, or want it corrected or
-            deleted, email us and we'll respond within 30 days.</li>
+        <li>The only information we hold that identifies you is your account record. To see it, correct it or have it
+            deleted, email us and we'll help you identify your account. We'll respond within 30 days and confirm when
+            it's done. Deleting it resets your session count and progress.</li>
         <li>If you're in Australia and unhappy with how we've handled your information, you can contact the <a
                 href="https://www.oaic.gov.au/">Office of the Australian Information Commissioner (OAIC)</a>. If you're
             elsewhere, you may have similar rights under your local law.</li>
     </ul>
 
-    <h2>9. Security</h2>
+    <h2>10. Security</h2>
     <p>All communication between the app and our server is encrypted (HTTPS). Our provider API keys are kept on the
         server and are never stored in the app. No system is perfectly secure, but we limit what we collect so there is
         as little as possible to protect.</p>
 
-    <h2>10. Changes to this policy</h2>
+    <h2>11. Changes to this policy</h2>
     <p>If we change how Boosture handles information, we'll update this page and the effective date above. If the change
         is significant (for example, if we start storing conversations), we'll also tell you in the app before it takes
         effect.</p>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>Reihanesadat Zekri (Delgarm)<br>
         Email: <a href="mailto:rihanna.zekri.dev@gmail.com">rihanna.zekri.dev@gmail.com</a></p>
 
-## Signing in with your Meta account
-
-When you sign in, Boosture receives your Meta user ID from Meta. This is a number that identifies your account to our app. We don't receive your name, email address, password or profile photo.
-
-We store your Meta user ID with the date you first signed in and the date you last signed in. As Boosture adds features, we also store the practice sessions you've used and your plan, so your free sessions and progress follow you across devices and reinstalls.
-
-We use this only to run Boosture: to keep you signed in, count your sessions and show your progress. We don't sell it, use it for advertising, or share it with anyone except the service providers listed below.
-
-## Your voice and conversations
-
-During a practice scenario, Boosture uses your headset's microphone to hear when you speak and records what you say. Each recording is handled like this:
-
-1. It is sent to our server, which passes it to ElevenLabs to turn your speech into text.
-2. That text, with the earlier lines of the conversation, is sent to Anthropic, which writes the character's next reply.
-3. The reply is sent to ElevenLabs, which turns it into the character's voice.
-4. At the end of a session, the conversation text is sent to Anthropic to write your feedback.
-
-Recordings and transcripts are used only for the session you're in. We don't save them in our database, and we don't use them to identify you. Recording only happens while a scenario is running.
-
-## Service providers and where your data is processed
-
-We use three service providers to run Boosture. Each handles your data only to provide its service to us, under its own terms and privacy policy.
-
-| Provider | What it does for Boosture | Data it handles | Where |
-| --- | --- | --- | --- |
-| Google (Firebase, Google Cloud) | Runs our server and stores account records | Meta user ID, sign-in dates, session records; passes recordings and text between the other providers | Australia, United States |
-| ElevenLabs | Speech-to-text, and the characters' voices | Your voice recordings; the characters' reply text | United States |
-| Anthropic | Writes the characters' replies and your feedback | Text of what you said and the conversation so far | United States |
-
-Because some processing happens outside Australia, your data may be handled under the privacy laws of those countries.
-
-## How long we keep your data, and deleting it
-
-We keep your account record for as long as you use Boosture. Recordings and transcripts aren't kept in our database after your session.
-
-To see what we hold about you or have it deleted, email **rihanna.zekri.dev@gmail.com **and we'll help you identify your account. We'll delete your account record within 30 days and confirm when it's done. Deleting it resets your session count and progress.
-
-The person responsible for your data is **Reihanesadat Zekri**, Australia.
 </body>
 
 </html>
